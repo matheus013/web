@@ -31,6 +31,7 @@ void WebManager::setPath(const QString &path) {
 }
 
 void WebManager::replyFinished(QNetworkReply * reply) {
-
+    qDebug() << "Ok";
 }
+
 

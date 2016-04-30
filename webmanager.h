@@ -16,5 +16,5 @@ public:
 private:
     void setPath(const QString &path);
 public slots:
-    void replyFinished(QNetworkReply* reply);
+    void replyFinished(QNetworkReply*reply);
 };
