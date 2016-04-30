@@ -3,8 +3,9 @@
 
 int main(int argc, char *argv[]) {
     QCoreApplication app(argc, argv);
-    WebManager *web = new WebManager("http://127.0.0.1:8000/");
+    WebManager *web = new WebManager();
     web->getFoods();
+    web->getUsers();
 
     return app.exec();
 }

@@ -10,9 +10,7 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    webmanager.cpp \
-    asd.cpp
+    webmanager.cpp
 
 HEADERS += \
-    webmanager.h \
-    asd.h
+    webmanager.h

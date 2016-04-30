@@ -7,14 +7,14 @@
 
 class WebManager : public QObject{
     Q_OBJECT
-    QString m_path;
+    QNetworkAccessManager * manager;
 public:
-    WebManager(QString path);
-    QString path() const;
+    WebManager();
     QJsonArray getFoods();
     QJsonArray getUsers();
-private:
-    void setPath(const QString &path);
 public slots:
     void replyFinished(QNetworkReply*reply);
+    void slotReadyRead();
+    void slotError(QNetworkReply::NetworkError);
+    void slotSslErrors(QList<QSslError>);
 };
