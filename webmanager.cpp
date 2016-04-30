@@ -18,7 +18,7 @@ QJsonArray WebManager::getFoods() {
     connect(manager, SIGNAL(finished(QNetworkReply*)),
             this, SLOT(replyFinished(QNetworkReply*)));
 
-    manager->get(QNetworkRequest(QUrl("http://127.0.0.1:8000/get_foods")));
+    manager->get(QNetworkRequest(QUrl(url)));
 
 }
 
@@ -28,5 +28,9 @@ QJsonArray WebManager::getUsers() {
 
 void WebManager::setPath(const QString &path) {
     m_path = path;
+}
+
+void WebManager::replyFinished(QNetworkReply * reply) {
+
 }
 

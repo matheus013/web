@@ -3,6 +3,7 @@
 #include <QObject>
 #include <QUrl>
 #include <QJsonArray>
+#include <QNetworkReply>
 
 class WebManager : public QObject{
     Q_OBJECT
@@ -14,4 +15,6 @@ public:
     QJsonArray getUsers();
 private:
     void setPath(const QString &path);
+public slots:
+    void replyFinished(QNetworkReply* reply);
 };
